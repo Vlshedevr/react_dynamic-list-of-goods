@@ -23,15 +23,18 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     if (sortType === SortType.All) {
-      getAll().then(setGoods).catch();
+      // eslint-disable-next-line no-console
+      getAll().then(setGoods).catch(console.error);
     }
 
     if (sortType === SortType.First5) {
-      get5First().then(setGoods).catch();
+      // eslint-disable-next-line no-console
+      get5First().then(setGoods).catch(console.error);
     }
 
     if (sortType === SortType.OnlyRed) {
-      getRedGoods().then(setGoods).catch();
+      // eslint-disable-next-line no-console
+      getRedGoods().then(setGoods).catch(console.error);
     }
   }, [sortType]);
 
