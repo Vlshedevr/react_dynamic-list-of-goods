@@ -23,15 +23,15 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     if (sortType === SortType.All) {
-      getAll().then(setGoods);
+      getAll().then(setGoods).catch();
     }
 
     if (sortType === SortType.First5) {
-      get5First().then(setGoods);
+      get5First().then(setGoods).catch();
     }
 
     if (sortType === SortType.OnlyRed) {
-      getRedGoods().then(setGoods);
+      getRedGoods().then(setGoods).catch();
     }
   }, [sortType]);
 
